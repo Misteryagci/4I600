@@ -1,0 +1,10 @@
+function [ output_args ] = normaliseImage( I,k1,k2 )
+%normaliseImage(I,k1,k2) renvoie l'image correspondant à I après changement
+%intervalle de variation des niveaux de gris [k1,k2]
+
+I
+
+
+
+end
+
