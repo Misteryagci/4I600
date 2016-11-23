@@ -31,3 +31,31 @@ fftshift(J2)
 
 % Interprétation des résulatats : Les modules seuillés sont tout noir parce
 % que le seuil choisi (3 * 10^5) est trop grand pour le seuillage.
+
+% Question 5
+% -----------
+
+% (a) Appel de la fonction blend avec les deux images précédents (alpha =
+% 0.5, par exemple)
+
+I3 = blend(I1,I2,0.5);
+
+% (b) Calcul la TF de l'image résultant du traitement
+
+If3 = compute_FT(I3);
+
+% (c) Seuillage de son module en utilisant la fonction précédente
+
+IS3 = seuillerImage(to_visualize_TF(If3),3*10^5);
+
+% (d) Visualisation du module seuillé
+
+fftshift(IS3)
+
+
+% Question 6
+% ----------
+
+% Le module seuillé précédemment contenait que des pixels noir alors que le
+% module seuillé du resultant de la fonction blend contient quelques pixels
+% blancs.
